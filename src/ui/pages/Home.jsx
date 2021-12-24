@@ -1,21 +1,17 @@
-import { useContext } from 'react';
-import { SessionContext } from '../context/SessionContext';
-import Editor from '../components/Editor';
+import Editor from '../components/editor/Editor';
+import Launchpad from '../components/launchpad/Launchpad';
 
 import './Home.css';
 
 function Home() {
-  const { sessionId } = useContext(SessionContext);
-
   return (
-      <div className="container px-4">
-        <div className="row g-2">
+      <div className="container">
+        <div className="row">
           <div className="col-lg-3 p-3 inner-container">
             <Editor/>
           </div>
           <div className="col-lg-9 p-3 inner-container">
-            
-            {sessionId}
+            <Launchpad/>
           </div>
         </div>
       </div>
