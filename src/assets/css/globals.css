@@ -1,0 +1,10 @@
+:root {
+    --s-purple: #bd34d1;
+    --s-dark: #111;
+}
+
+html, body {
+    font-family: 'Poppins';
+    background-color: var(--s-dark);
+    color: white;
+}
