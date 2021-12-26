@@ -5,8 +5,8 @@ export const loadItem = async (itemName) => {
 
   if (item === null) {
     const myNewId = UUID();
-    await localStorage.setItem(itemName, myNewId);
-    item = await localStorage.getItem(itemName);
+    localStorage.setItem(itemName, myNewId);
+    item = localStorage.getItem(itemName);
   }
   return item;
 };

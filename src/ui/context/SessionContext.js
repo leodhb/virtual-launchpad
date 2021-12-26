@@ -5,6 +5,8 @@ export const SessionContext = createContext();
 
 const SessionContextProvider = ({ children }) => {
   const [sessionId, setSessionId] = useState('');
+  const [ editorVisible, setEditorVisible ] = useState(true);
+  const [ mixerVisible, setMixerVisible ] = useState(true);
 
   useEffect(() => {
     loadItem('launchpadid').then((result) => {
@@ -13,8 +15,18 @@ const SessionContextProvider = ({ children }) => {
     });
   }, []);
 
+  const toggleEditorVisible = () => setEditorVisible(!editorVisible);
+  const toggleMixerVisible = () => setMixerVisible(!mixerVisible);
+
   return (
-    <SessionContext.Provider value={{ sessionId, setSessionId }}>
+    <SessionContext.Provider 
+          value={{ sessionId, 
+                   setSessionId, 
+                   editorVisible, 
+                   toggleEditorVisible,
+                   mixerVisible,
+                   toggleMixerVisible
+                }}>
       {children}
     </SessionContext.Provider>
   );

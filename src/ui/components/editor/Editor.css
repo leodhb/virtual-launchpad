@@ -2,3 +2,39 @@
     width: 100%;
     height: 100%;
 }
+
+.editor-window > label {
+    margin-top: 1rem;
+}
+
+.pad-color-picker {
+    height: 2rem;
+    border: none;
+    padding: 0;
+}
+
+.file-upload {
+    background-color: transparent;
+    height: 7rem;
+    border-style: dashed;
+}
+
+.editor-container {
+    border-right: solid 1px #555;
+    border-bottom: solid 1px #555;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.editor-container {
+    -moz-transition: width .2s;
+    -ms-transition: width .2s;
+    -o-transition: width .2s;
+    -webkit-transition: width .2s;
+    transition: width .2s;
+}
+
+.editor-closed {
+    width: 0;
+}
