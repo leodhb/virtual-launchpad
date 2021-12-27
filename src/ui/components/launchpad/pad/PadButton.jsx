@@ -21,22 +21,15 @@ function PadButton(props) {
 
   const currentActiveElement = useActiveElement();
 
-  //useEventListener("keydown", handleKeyPress)
-
   //Change volume when the mixer channel fader is moved
   useEffect(() => {
     if(volume != props.volume) {
       setVolume(props.volume)
+      ReactHowler.current.volume(props.volume)
     }
   }, [props.volume]);
 
-  useEffect(() => {
-    if(playing) {
-      ReactHowler.current.play()
-    } else {
-      ReactHowler.current.stop()
-    }
-  }, [playing])
+  useEffect(() => playing ? handleReset() : ReactHowler.current.stop(), [playing])
 
   const handleToggle = () => loop ? handleLoop() : handleSample()
 
@@ -54,12 +47,9 @@ function PadButton(props) {
   const handleLoop = () => {
     let playingsong = true;
 
-    if(playing) {
-      playingsong = false;
-      handleStop();
-    }
+    if(playing) playingsong = false;
 
-   setPlaying(playingsong)
+    setPlaying(playingsong)
   }
 
   const handleReset = () => {
@@ -67,22 +57,11 @@ function PadButton(props) {
     ReactHowler.current.play()
   }
 
-  const handleStop = () => {
-    ReactHowler.current.stop()
-    setPlaying(false)
-  }
+  const handleOnPlay = () => setPlaying(true)
 
-  const handleOnPlay = () => {
-    setPlaying(true)
-  }
+  const handleOnLoad = () => setLoaded(true)
 
-  const handleOnLoad = () => {
-    setLoaded(true)
-  }
-
-  const handleOnEnd = () => {
-    setPlaying(false)
-  }
+  const handleOnEnd = () => setPlaying(false)
 
   const ReactHowler = useRef(new Howl({
     src: [source],
