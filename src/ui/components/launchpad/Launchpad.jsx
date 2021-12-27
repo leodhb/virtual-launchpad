@@ -16,8 +16,8 @@ function Launchpad() {
       <div className="launchpad-window">
         <div className="row mb-3">
           <div className="col-lg-5">
-            <button className="btn btn-primary" onClick={toggleEditorVisible}>Editor</button>
-            <button className="btn btn-primary mx-4" onClick={toggleMixerVisible}>Mixer</button>
+            <button className="btn btn-light rounded-0 launchpad-menu-btn left-btn" onClick={toggleEditorVisible}>Editor</button>
+            <button className="btn btn-light rounded-0 launchpad-menu-btn right-btn" onClick={toggleMixerVisible}>Mixer</button>
           </div>
         </div>
         

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { LaunchpadContext } from '../../../context/LaunchpadContext';
+import RangeSlider from '../range-slider/RangeSlider';
 import './Channel.css';
 
 function Channel(props) {
@@ -16,7 +17,9 @@ function Channel(props) {
         <p className="text-center text-light">Channel {props.channelindex + 1}</p>
         <p className={`mixer-screen`}>{(props.params.volume * 100).toFixed(1)}</p>
         <hr />
-        <input className="slider" value={volume} type="range" orient="vertical" step=".001" min="0" max="1" onChange={e => handleVolume(e.target.value)}/>
+
+        <RangeSlider volume={volume} onChange={e => handleVolume(e.target.value)}></RangeSlider>
+
         <p className="mt-4 sample-description channel-note">{props.params.name}</p>
       </div>
   );

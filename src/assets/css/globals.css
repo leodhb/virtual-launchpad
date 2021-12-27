@@ -1,10 +1,26 @@
 :root {
     --s-purple: #bd34d1;
     --s-dark: #111;
+    --scrollbarBG: #000;
+  --thumbBG: #333;
 }
 
 html, body {
     font-family: 'Poppins';
     background-color: var(--s-dark);
     color: white;
+    scrollbar-color: dark;
+}
+
+::-webkit-scrollbar {
+    background: #000;
+    border: solid 1px #888;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
 }

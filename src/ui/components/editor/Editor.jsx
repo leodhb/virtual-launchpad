@@ -61,7 +61,7 @@ function Editor() {
         <input className="d-none" accept="audio/*" ref={uploadSampleRef} type="file" name="audio" id="audio" onChange={e => updateFile(e.target.files[0])}></input>
 
         <div className="d-grid gap-2">
-            <button className="btn btn-primary file-upload" onClick={handleSampleUpload}>{sendButtonText}</button>
+            <button className="btn btn-light text-light file-upload " onClick={handleSampleUpload}>{sendButtonText}</button>
         </div>
 
         <label htmlFor="name">Name</label>
@@ -73,7 +73,7 @@ function Editor() {
         </div>
 
         <div className="d-grid gap-2">
-          <button className="btn btn-primary" onClick={() => addPad(padObject)} disabled={disabled}>Add pad</button>
+          <button className="btn btn-light rounded-pill" onClick={() => addPad(padObject)} disabled={disabled}>Add pad</button>
         </div>
 
         <div className="form-check">
