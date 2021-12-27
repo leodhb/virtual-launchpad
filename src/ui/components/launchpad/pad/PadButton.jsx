@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useEventListener } from "../../../../hooks/useEventListener";
 import { useActiveElement } from "../../../../hooks/useActiveElement";
 import { LightenDarkenColor } from "../../../../helpers/Colors";
-import ReactHowler from "../../../utils/ReactHowler";
+import { Howl } from "howler";
 
 import './PadButton.css'
 
@@ -19,14 +19,7 @@ function PadButton(props) {
   
   const buttonRef = useRef();
 
-
   const currentActiveElement = useActiveElement();
-
-  const handleKeyPress = ({code}) => {
-    if(String(code) === props.keycode && currentActiveElement.tagName != 'INPUT') {
-      buttonRef.current.click()
-    }
-  }
 
   //useEventListener("keydown", handleKeyPress)
 
@@ -38,21 +31,24 @@ function PadButton(props) {
   }, [props.volume]);
 
   useEffect(() => {
-    console.log(playing)
+    if(playing) {
+      ReactHowler.current.play()
+    } else {
+      ReactHowler.current.stop()
+    }
   }, [playing])
 
   const handleToggle = () => loop ? handleLoop() : handleSample()
 
   const handleSample = () => {
-    let playingsong = true;
-    setClicked(true)
-
+    setClicked(true);
     setTimeout(() => { setClicked(false) }, 50)
 
     if(playing) {
       handleReset();
     }
-    setPlaying(playingsong);
+
+    setPlaying(true);
   }
 
   const handleLoop = () => {
@@ -67,12 +63,12 @@ function PadButton(props) {
   }
 
   const handleReset = () => {
-    ReactHowler.player.stop()
-    ReactHowler.player.play()
+    ReactHowler.current.stop()
+    ReactHowler.current.play()
   }
 
   const handleStop = () => {
-    ReactHowler.player.stop()
+    ReactHowler.current.stop()
     setPlaying(false)
   }
 
@@ -88,6 +84,17 @@ function PadButton(props) {
     setPlaying(false)
   }
 
+  const ReactHowler = useRef(new Howl({
+    src: [source],
+    format: ['mp3'],
+    onplay: handleOnPlay,
+    onend: handleOnEnd,
+    onload: handleOnLoad,
+    volume: volume,
+    loop: loop,
+    mute: mute
+  }));
+
   const lightenColor = LightenDarkenColor(color, 50);
   const darkerColor  = LightenDarkenColor(color, -30);
 
@@ -99,22 +106,9 @@ function PadButton(props) {
   } : {};
 
   return (
-    <>
-        <ReactHowler
-          src={[source]}
-          format={['mp3']}
-          playing={playing}
-          onLoad={handleOnLoad}
-          onPlay={handleOnPlay}
-          onEnd={handleOnEnd}
-          loop={loop}
-          mute={mute}
-          volume={volume}
-          ref={(ref) => (ReactHowler.player = ref)}
-        />
-
-          <button className="pad" ref={buttonRef} id={props.uuid} style={activeStyles} onClick={handleToggle}>{props.keycode.substr(-1)}</button>
-          <p className="sample-description">{name}</p>
+      <>
+        <button className="pad" ref={buttonRef} id={props.uuid} style={activeStyles} onClick={handleToggle}>{props.keycode.substr(-1)}</button>
+        <p className="sample-description">{name}</p>
       </>
   );
 
