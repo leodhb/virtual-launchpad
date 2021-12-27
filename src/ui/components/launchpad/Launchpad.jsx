@@ -1,12 +1,15 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { LaunchpadContext } from '../../context/LaunchpadContext';
 import { SessionContext } from '../../context/SessionContext';
+import { LoadKeys } from '../../../helpers/LoadKeys';
 import './Launchpad.css';
 import PadButton from './pad/PadButton';
 
 function Launchpad() {
   const { launchpad, playSampleByKey } = useContext(LaunchpadContext);
   const { toggleEditorVisible, toggleMixerVisible } = useContext(SessionContext)
+
+  LoadKeys(launchpad);
 
   return (
     <div className="col p-3 launchpad-container">
