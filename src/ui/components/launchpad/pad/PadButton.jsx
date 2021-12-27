@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useEventListener } from "../../../../hooks/useEventListener";
+import { useActiveElement } from "../../../../hooks/useActiveElement";
 import { LightenDarkenColor } from "../../../../helpers/Colors";
-import ReactHowler from "react-howler";
+import ReactHowler from "../../../utils/ReactHowler";
 import './PadButton.css'
 
 function PadButton(props) {
@@ -14,18 +16,18 @@ function PadButton(props) {
   const [volume, setVolume] = useState(props.volume);
   const [clicked, setClicked] = useState(false)
   
-  const buttonRef = useRef(null);
+  const buttonRef = useRef();
 
 
-  window.addEventListener(
-    "keydown",
-    (event) => {
-      if(event.code == props.keycode) {
-        buttonRef.current.click();
-      }
-    },
-    false
-  );
+  const currentActiveElement = useActiveElement();
+
+  const handleKeyPress = ({code}) => {
+    if(String(code) === props.keycode && currentActiveElement.tagName != 'INPUT') {
+      buttonRef.current.click()
+    }
+  }
+
+  useEventListener("keydown", handleKeyPress)
 
   //Change volume when the mixer channel fader is moved
   useEffect(() => {

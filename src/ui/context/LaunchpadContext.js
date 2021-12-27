@@ -1,7 +1,5 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 import { v4 as UUID } from 'uuid';
-
-import { SessionContext } from './SessionContext';
 import { ratinho } from '../../helpers/Soundboard';
 
 export const LaunchpadContext = createContext();
@@ -15,12 +13,7 @@ const LaunchpadContextProvider = ({ children }) => {
     })
   }
 
-  const [launchpad, setLaunchpad] = useState([]);
-  
-
-  const KEYS = "qwertyuiopasdfzxcv";
-
-  const { sessionId } = useContext(SessionContext);
+  const [launchpad, setLaunchpad] = useState(loadSoundboard(ratinho));
 
   /* add a pad to launchpad */
   const addPad = (padObject) => {
@@ -36,7 +29,7 @@ const LaunchpadContextProvider = ({ children }) => {
   const playSampleByKey = keycode => {
     let samples = [...launchpad]
 
-    samples.find(obj => obj.keycode == keycode).playing = true
+    samples.find(obj => obj.keycode === keycode).playing = true
 
     setLaunchpad(samples)
   }
@@ -45,7 +38,7 @@ const LaunchpadContextProvider = ({ children }) => {
   const setChannelVolume =  (id, volume) => {
     let items = [...launchpad]
 
-    items.find(obj => obj.uuid == id).volume = volume
+    items.find(obj => obj.uuid === id).volume = volume
 
     setLaunchpad(items);
   }

@@ -28,11 +28,11 @@
 }
 
 .editor-container {
-    -moz-transition: width .2s;
-    -ms-transition: width .2s;
-    -o-transition: width .2s;
-    -webkit-transition: width .2s;
-    transition: width .2s;
+    -moz-transition: .2s ease;
+    -ms-transition: .2s ease;
+    -o-transition: .2s ease;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
 }
 
 .editor-closed {

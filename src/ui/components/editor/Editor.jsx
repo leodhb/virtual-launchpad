@@ -14,7 +14,7 @@ function Editor() {
   const uploadSampleRef = useRef(null);
 
   const [ padObject, setPadObject] = useState({
-    source: 'audio/rapazie.mp3',
+    source: '',
     color: '#ff0000',
     name: 'VIIIXI',
     keycode: 'KeyC',
