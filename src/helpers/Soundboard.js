@@ -1,6 +1,6 @@
 export const ratinho = [
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/jesus.mp3?raw=true',
+    source: '/virtual-launchpad/audio/jesus.mp3',
     color: '#cc6699',
     name: 'JESUS',
     keycode: 'KeyQ',
@@ -13,7 +13,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/rapaz.mp3?raw=true',
+    source: '/virtual-launchpad/audio/rapaz.mp3',
     color: '#cc6699',
     name: 'RAPAZ',
     keycode: 'KeyW',
@@ -26,7 +26,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/uepa.mp3?raw=true',
+    source: '/virtual-launchpad/audio/uepa.mp3',
     color: '#cc6699',
     name: 'UEPAAAA',
     keycode: 'KeyE',
@@ -39,7 +39,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/ratinho.mp3?raw=true',
+    source: '/virtual-launchpad/audio/ratinho.mp3',
     color: '#cc6699',
     name: 'RATINHO',
     keycode: 'KeyR',
@@ -52,7 +52,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/pare.mp3?raw=true',
+    source: '/virtual-launchpad/audio/pare.mp3',
     color: '#cc6699',
     name: 'PARE',
     keycode: 'KeyT',
@@ -65,7 +65,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/vixi.mp3?raw=true',
+    source: '/virtual-launchpad/audio/vixi.mp3',
     color: '#cc6699',
     name: 'VIXI',
     keycode: 'KeyY',
@@ -78,7 +78,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/irra.mp3?raw=true',
+    source: '/virtual-launchpad/audio/irra.mp3',
     color: '#cc6699',
     name: 'IRRAAAA',
     keycode: 'KeyU',
@@ -92,7 +92,7 @@ export const ratinho = [
   },
 
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/queisso.mp3?raw=true',
+    source: '/virtual-launchpad/audio/queisso.mp3',
     color: '#cc6699',
     name: 'QUE ISSO',
     keycode: 'KeyI',
@@ -106,7 +106,7 @@ export const ratinho = [
   },
 
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/cavalo.mp3?raw=true',
+    source: '/virtual-launchpad/audio/cavalo.mp3',
     color: '#cc6699',
     name: 'CAVALO',
     keycode: 'KeyO',
@@ -119,7 +119,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/danca.mp3?raw=true',
+    source: '/virtual-launchpad/audio/danca.mp3',
     color: '#cc6699',
     name: 'DANÇA GATINHO',
     keycode: 'KeyP',
@@ -133,7 +133,7 @@ export const ratinho = [
   },
 
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/fail.mp3?raw=true',
+    source: '/virtual-launchpad/audio/fail.mp3',
     color: '#cc6699',
     name: 'FAIL',
     keycode: 'KeyA',
@@ -147,7 +147,7 @@ export const ratinho = [
   },
 
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/risada.mp3?raw=true',
+    source: '/virtual-launchpad/audio/risada.mp3',
     color: '#cc6699',
     name: 'RISADA',
     keycode: 'KeyS',
@@ -161,7 +161,7 @@ export const ratinho = [
   },
 
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/cartoon.mp3?raw=true',
+    source: '/virtual-launchpad/audio/cartoon.mp3',
     color: '#cc6699',
     name: 'CARTOON',
     keycode: 'KeyD',
@@ -174,7 +174,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/yamete.mp3?raw=true',
+    source: '/virtual-launchpad/audio/yamete.mp3',
     color: '#cc6699',
     name: 'YAMETE',
     keycode: 'KeyF',
@@ -187,7 +187,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/vinheta.mp3?raw=true',
+    source: '/virtual-launchpad/audio/vinheta.mp3',
     color: '#cc6699',
     name: 'BGM COMERCIAL',
     keycode: 'KeyZ',
@@ -200,7 +200,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/bgm2.mp3?raw=true',
+    source: '/virtual-launchpad/audio/bgm2.mp3',
     color: '#cc6699',
     name: 'BGM CHAVES',
     keycode: 'KeyX',
@@ -213,7 +213,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/bgm3.mp3?raw=true',
+    source: '/virtual-launchpad/audio/bgm3.mp3',
     color: '#cc6699',
     name: 'BGM BOA NOITE',
     keycode: 'KeyC',
@@ -226,7 +226,7 @@ export const ratinho = [
     isSeeking: false
   },
   {
-    source: 'https://github.com/leodhb/instant-ratinho/blob/main/audio/bgm4.mp3?raw=true',
+    source: '/virtual-launchpad/audio/bgm4.mp3',
     color: '#cc6699',
     name: 'BGM PEGADINHA',
     keycode: 'KeyV',
