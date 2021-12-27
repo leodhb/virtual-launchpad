@@ -3,7 +3,7 @@ import "./RangeSlider.css";
 
 function RangeSlider(props) {
   return (
-    <div class="range-slider">
+    <div className="range-slider">
       <input
         value={props.volume}
         type="range"
@@ -13,8 +13,8 @@ function RangeSlider(props) {
         max="1"
         onChange={props.onChange}
       />
-      <div class="range-slider__bar theme2"></div>
-      <div class="range-slider__thumb"></div>
+      <div className="range-slider__bar theme2"></div>
+      <div className="range-slider__thumb"></div>
     </div>
   );
 }
