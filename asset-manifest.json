@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/virtual-launchpad/static/css/main.62313e41.css",
-    "main.js": "/virtual-launchpad/static/js/main.3dfcab05.js",
+    "main.js": "/virtual-launchpad/static/js/main.ea324979.js",
     "static/js/787.7eaa1e7f.chunk.js": "/virtual-launchpad/static/js/787.7eaa1e7f.chunk.js",
     "index.html": "/virtual-launchpad/index.html",
     "main.62313e41.css.map": "/virtual-launchpad/static/css/main.62313e41.css.map",
-    "main.3dfcab05.js.map": "/virtual-launchpad/static/js/main.3dfcab05.js.map",
+    "main.ea324979.js.map": "/virtual-launchpad/static/js/main.ea324979.js.map",
     "787.7eaa1e7f.chunk.js.map": "/virtual-launchpad/static/js/787.7eaa1e7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.62313e41.css",
-    "static/js/main.3dfcab05.js"
+    "static/js/main.ea324979.js"
   ]
 }
