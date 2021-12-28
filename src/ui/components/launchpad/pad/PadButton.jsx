@@ -91,7 +91,7 @@ function PadButton(props) {
   };
 
   const lightenColor = LightenDarkenColor(color, 50);
-  const darkerColor = LightenDarkenColor(color, -30);
+  const darkerColor  = LightenDarkenColor(color, -30);
 
   const activeStyles =
     playing && !clicked
