@@ -11,7 +11,6 @@ const SessionContextProvider = ({ children }) => {
   useEffect(() => {
     loadItem('launchpadid').then((result) => {
       setSessionId(result);
-      console.log('SESSÃO: ', result);
     });
   }, []);
 

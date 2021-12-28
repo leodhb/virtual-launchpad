@@ -7,20 +7,13 @@ import PadButton from './pad/PadButton';
 
 function Launchpad() {
   const { launchpad, playSampleByKey } = useContext(LaunchpadContext);
-  const { toggleEditorVisible, toggleMixerVisible } = useContext(SessionContext)
+
 
   LoadKeys(launchpad);
 
   return (
     <div className="col p-3 launchpad-container">
       <div className="launchpad-window">
-        <div className="row mb-3">
-          <div className="col-lg-5">
-            <button className="btn btn-light rounded-0 launchpad-menu-btn left-btn" onClick={toggleEditorVisible}>Editor</button>
-            <button className="btn btn-light rounded-0 launchpad-menu-btn right-btn" onClick={toggleMixerVisible}>Mixer</button>
-          </div>
-        </div>
-        
         <h1>Launchpad</h1>
           <div className="row">
             {

@@ -1,7 +1,7 @@
 export const ratinho = [
   {
     source: '/virtual-launchpad/audio/jesus.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'JESUS',
     keycode: 'KeyQ',
     playing: false,
@@ -14,7 +14,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/rapaz.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'RAPAZ',
     keycode: 'KeyW',
     playing: false,
@@ -27,7 +27,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/uepa.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'UEPAAAA',
     keycode: 'KeyE',
     playing: false,
@@ -40,7 +40,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/ratinho.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'RATINHO',
     keycode: 'KeyR',
     playing: false,
@@ -53,7 +53,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/pare.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'PARE',
     keycode: 'KeyT',
     playing: false,
@@ -66,7 +66,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/vixi.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'VIXI',
     keycode: 'KeyY',
     playing: false,
@@ -79,7 +79,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/irra.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'IRRAAAA',
     keycode: 'KeyU',
     playing: false,
@@ -93,7 +93,7 @@ export const ratinho = [
 
   {
     source: '/virtual-launchpad/audio/queisso.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'QUE ISSO',
     keycode: 'KeyI',
     playing: false,
@@ -107,7 +107,7 @@ export const ratinho = [
 
   {
     source: '/virtual-launchpad/audio/cavalo.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'CAVALO',
     keycode: 'KeyO',
     playing: false,
@@ -120,7 +120,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/danca.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'DANÇA GATINHO',
     keycode: 'KeyP',
     playing: false,
@@ -134,7 +134,7 @@ export const ratinho = [
 
   {
     source: '/virtual-launchpad/audio/fail.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'FAIL',
     keycode: 'KeyA',
     playing: false,
@@ -148,7 +148,7 @@ export const ratinho = [
 
   {
     source: '/virtual-launchpad/audio/risada.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'RISADA',
     keycode: 'KeyS',
     playing: false,
@@ -162,7 +162,7 @@ export const ratinho = [
 
   {
     source: '/virtual-launchpad/audio/cartoon.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'CARTOON',
     keycode: 'KeyD',
     playing: false,
@@ -175,7 +175,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/yamete.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'YAMETE',
     keycode: 'KeyF',
     playing: false,
@@ -188,7 +188,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/vinheta.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'BGM COMERCIAL',
     keycode: 'KeyZ',
     playing: false,
@@ -201,7 +201,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/bgm2.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'BGM CHAVES',
     keycode: 'KeyX',
     playing: false,
@@ -214,7 +214,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/bgm3.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'BGM BOA NOITE',
     keycode: 'KeyC',
     playing: false,
@@ -227,7 +227,7 @@ export const ratinho = [
   },
   {
     source: '/virtual-launchpad/audio/bgm4.mp3',
-    color: '#cc6699',
+    color: '#ffda29',
     name: 'BGM PEGADINHA',
     keycode: 'KeyV',
     playing: false,

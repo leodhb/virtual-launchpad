@@ -1,48 +1,53 @@
-import React, { createContext, useState } from 'react';
-import { v4 as UUID } from 'uuid';
-import { ratinho } from '../../helpers/Soundboard';
+import React, { createContext, useState } from "react";
+import { v4 as UUID } from "uuid";
+import { ratinho } from "../../helpers/Soundboard";
 
 export const LaunchpadContext = createContext();
 
 const LaunchpadContextProvider = ({ children }) => {
-
   const loadSoundboard = (array) => {
-    let soundboard = [...array]
-    return soundboard.map(obj => {
-      return {...obj, uuid: UUID()}
-    })
-  }
+    let soundboard = [...array];
+    return soundboard.map((obj) => {
+      return { ...obj, uuid: UUID() };
+    });
+  };
 
   const [launchpad, setLaunchpad] = useState(loadSoundboard(ratinho));
 
   /* add a pad to launchpad */
   const addPad = (padObject) => {
-    const list = [...launchpad, {
-      ...padObject, uuid: UUID()
-    }];
-
+    const list = [
+      ...launchpad,
+      {
+        ...padObject,
+        uuid: UUID(),
+      },
+    ];
 
     setLaunchpad(list);
   };
 
-  
-  const playSampleByKey = keycode => {
-    let samples = [...launchpad]
+  const playSampleByKey = (keycode) => {
+    let samples = [...launchpad];
 
-    samples.find(obj => obj.keycode === keycode).playing = true
+    samples.find((obj) => obj.keycode === keycode).playing = true;
 
-    setLaunchpad(samples)
-  }
+    setLaunchpad(samples);
+  };
 
+  const setChannelVolume = (id, volume) => {
+    let items = [...launchpad];
 
-  const setChannelVolume =  (id, volume) => {
-    let items = [...launchpad]
-
-    items.find(obj => obj.uuid === id).volume = volume
+    items.find((obj) => obj.uuid === id).volume = volume;
 
     setLaunchpad(items);
-  }
+  };
 
+  const togglePlayingByKey = (id, playing) => {
+    let samples = [...launchpad];
+    samples.find((obj) => obj.uuid === id).playing = playing;
+    setLaunchpad(samples);
+  }
 
   return (
     <LaunchpadContext.Provider
@@ -50,7 +55,8 @@ const LaunchpadContextProvider = ({ children }) => {
         launchpad,
         addPad,
         setChannelVolume,
-        playSampleByKey
+        playSampleByKey,
+        togglePlayingByKey
       }}
     >
       {children}

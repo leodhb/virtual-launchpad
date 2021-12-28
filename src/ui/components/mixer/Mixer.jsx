@@ -11,10 +11,7 @@ function Mixer() {
 
   return (
     <div className={`col mixer-container ${mixerVisible ? '' : 'mixer-closed'}`}>
-      <div className="container-fluid mixer p-4">
-        <div className="row">
-          <h1>Mixer</h1>
-        </div>
+      <div className="container-fluid p-0 mixer">
         <div className="row">
             {
               launchpad.map((item, index) => {

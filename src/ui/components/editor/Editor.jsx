@@ -36,7 +36,6 @@ function Editor() {
     } else {
       setDisabled(true);
     }
-    console.log(padObject);
   }, [padObject]);
 
   const updateFile = (file) => {

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LightenDarkenColor } from "../../../../helpers/Colors";
+import { LaunchpadContext } from "../../../context/LaunchpadContext";
 import { Howl } from "howler";
 
 import "./PadButton.css";
+import { useContext } from "react/cjs/react.development";
 
 function PadButton(props) {
   const [source, setSource] = useState(props.source);
@@ -14,6 +16,8 @@ function PadButton(props) {
   const [mute, setMute] = useState(props.mute);
   const [volume, setVolume] = useState(props.volume);
   const [clicked, setClicked] = useState(false);
+
+  const { togglePlayingByKey } = useContext(LaunchpadContext);
 
   const buttonRef = useRef();
 
@@ -51,7 +55,14 @@ function PadButton(props) {
 
   useEffect(() => {
     if (sound) {
-      playing ? handleReset() : sound.stop();
+      if(playing) {
+        handleReset()
+      } else {
+        sound.stop();
+      }
+
+      //we need to update the context playing bool to get peaks in the mixer
+      togglePlayingByKey(props.uuid, playing);
     }
   }, [sound, playing]);
 

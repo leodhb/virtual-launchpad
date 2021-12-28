@@ -2,6 +2,9 @@
   background-color: #ddd;
 }
 
+.launchpad-menu-btn > i {
+  margin-right: .5rem;
+}
 .left-btn {
   border-top-left-radius: 50rem !important;
   border-bottom-left-radius: 50rem !important;

@@ -13,7 +13,6 @@ export function LoadKeys(launchpad) {
         window.addEventListener(
             "keydown",
             (event) => {
-              console.log(acceptedKeys);
               let playFunction = acceptedKeys[event.code];
           
               if (playFunction) {
