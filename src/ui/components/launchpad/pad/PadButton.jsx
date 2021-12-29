@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { LightenDarkenColor } from "../../../../helpers/Colors";
 import { LaunchpadContext } from "../../../context/LaunchpadContext";
 import { Howl } from "howler";
 
 import "./PadButton.css";
-import { useContext } from "react/cjs/react.development";
 
 function PadButton(props) {
   const [source, setSource] = useState(props.source);

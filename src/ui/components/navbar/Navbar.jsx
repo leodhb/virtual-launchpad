@@ -29,9 +29,9 @@ export default function Navbar(props) {
       <span className="navbar-brand mb-0 h1">Launchpad</span>
       <button className="btn btn-light btn-circle" onClick={toggleMute}>
         {muted ? (
-          <i class="fas fa-volume-mute"></i>
+          <i className="fas fa-volume-mute"></i>
         ) : (
-          <i class="fas fa-volume-up"></i>
+          <i className="fas fa-volume-up"></i>
         )}
       </button>
       <div className="form-inline">
